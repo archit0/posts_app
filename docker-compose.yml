@@ -11,8 +11,8 @@ services:
     working_dir: /application/server
     env_file:
       - server/config/settings/.env
-    command: "tail -f /dev/null"
-    # command: ["bash", "docker_entry.sh", "python3", "manage.py", "runserver", "0:8000"]
+    # command: "tail -f /dev/null"
+    command: ["bash", "docker_entry.sh", "python3", "manage.py", "runserver", "0:8000"]
     volumes:
       - .:/application
       - app-python-site-packages:/usr/local/lib/python3.7/site-packages
